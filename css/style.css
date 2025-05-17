@@ -71,8 +71,11 @@ body {
 .dust {
     background-image: url(../images/dust_2.jpg);
 }
-.anubis {
+/* .anubis {
     background-image: url(../images/anubis.jpg);
+} */
+.nuke {
+    background-image: url(../images/nuke.png);
 }
 .ancient {
     background-image: url(../images/ancient.jpg);
