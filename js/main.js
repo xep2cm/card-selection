@@ -9,19 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Если карта уже выбрана, снимаем выбор
                 this.classList.remove('selected');
                 selectedCount--;
-                
-                // Если снято хотя бы одно выделение, скрываем сообщение
+
+                // Убираем сообщение, если осталось менее 4-х карт
                 if (selectedCount < 4) {
                     resultMessage.textContent = '';
                 }
             } else {
-                // Если лимит карт исчерпан, остановить выбор
+                // Если лимит карт исчерпан, прекращаем выбор
                 if (selectedCount >= 4) return;
 
                 this.classList.add('selected');
                 selectedCount++;
 
-                // Если выбрано ровно 4 карты, определить оставшуюся
+                // Если выбрано ровно 4 карты, выводим оставшуюся
                 if (selectedCount === 4) {
                     const unselectedCard = [...cards].find(card => !card.classList.contains('selected'));
                     resultMessage.textContent = `Оставшаяся карта: ${unselectedCard.querySelector('.card-name').textContent}`;
